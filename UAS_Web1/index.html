@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Logo.png" type="image/png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>PERPUSTAKAAN SINAR EDUKASI</title>
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #001f3f, #083c6a);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(135deg, #001f3f, #083c6a);
+            padding: 0.8rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #FFD700;
+            border-bottom: 2px solid #FFD700;
+        }
+
+        .hero {
+            background: url('Gedung Perpustakaan.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .content {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .content h2 {
+            color: #001f3f;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 1rem;
+            width: 280px;
+            padding: 1rem;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #0074D9;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .card img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .section-label {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #001f3f;
+            margin: 2rem 0;
+        }
+
+        .contact-section {
+            background-color: #001f3f;
+            color: white;
+            padding: 2rem 1rem;
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .contact-info, .social-media {
+            flex: 1;
+            min-width: 300px;
+            margin: 0 1rem;
+        }
+
+        .contact-info h2, .social-media h2 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            color: #FFD700;
+        }
+
+        .contact-info p, .social-media ul {
+            margin: 0.5rem 0;
+        }
+
+        .social-media ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .social-media li {
+            margin: 0.5rem 0;
+        }
+
+        .social-media a {
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+        }
+
+        .social-media a i {
+            font-size: 1.5rem;
+            margin-right: 0.5rem;
+        }
+
+        .social-media a:hover {
+            color: #FFD700;
+        }
+
+        footer {
+            background-color: #001f3f;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav a {
+                font-size: 0.9rem;
+                margin: 0 0.5rem;
+            }
+
+            .card-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+
+            .content h2 {
+                font-size: 1.5rem;
+            }
+
+            .contact-container {
+                flex-direction: column;
+            }
+
+            .contact-info, .social-media {
+                margin: 1rem 0;
+            }
+
+            footer p {
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                font-size: 1rem;
+                margin: 0.5rem 0;
+            }
+
+            .card img {
+                height: 250px;
+            }
+
+            footer p {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>PERPUSTAKAAN SINAR EDUKASI</h1>
+</header>
+
+<nav>
+    <ul style="display: flex; justify-content: center; padding: 0; margin: 0; list-style-type: none;">
+        <li><a href="Beranda.html">Beranda</a></li>
+        <li><a href="Profil.html">Profil</a></li>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#catalog">Katalog</a></li>
+        <li><a href="#contact">Kontak</a></li>
+        <li><a href="Transaksi.html">Transaksi</a></li>
+        <li><a href="Login.html">Login</a></li>
+    </ul>
+</nav>
+
+
+<div class="hero">
+    <h1>Selamat Datang</h1>
+</div>
+
+<section id="about" class="content">
+    <h2>About Us</h2>
+    <p>Perpustakaan Sinar Edukasi, didirikan pada tahun 2007, bertujuan mendukung literasi masyarakat melalui koleksi buku, sumber digital, dan program edukasi. Dengan visi menjadi pusat pembelajaran inspiratif, perpustakaan ini berkomitmen menciptakan budaya membaca yang inklusif. Kegiatan seperti diskusi buku, pelatihan, dan seminar rutin diadakan untuk memberdayakan masyarakat dan mendukung pengembangan pengetahuan serta kreativitas.</p>
+</section>
+
+<section id="catalog" class="content">
+    <h2 class="section-label">★ Fiksi ★</h2>
+    <div class="card-container">
+        <div class="card">
+            <img src="Malioboro at Midnight.jpeg" alt="Buku Fiksi">
+            <h3>MALBORO AT MIDNIGHT</h3>
+            <p>Bercerita tentang Serana Nighita, seorang wanita cantik yang menjalani hubungan dengan seorang lelaki bernama Jan Ichard...</p>
+        </div>
+        <div class="card">
+            <img src="HelloCello.jpg" alt="Buku Fiksi">
+            <h3>HELLO CELLO</h3>
+            <p>Jatuh cinta lagi? Hmm, sepertinya itu tak ada lagi dalam kamus Helga...</p>
+        </div>
+        <div class="card">
+            <img src="Woke Up as a Villainess.jpg" alt="Buku Fiksi">
+            <h3>WOKE UP AS A VILLAINES</h3>
+            <p>Arini, seorang pekerja keras yang tumbuh di panti asuhan, hanya menginginkan uang untuk bertahan hidup...</p>
+        </div>
+    </div>
+
+    <h2 class="section-label">★ Non-Fiksi ★</h2>
+    <div class="card-container">
+        <div class="card">
+            <img src="SEBUAH SENI UNTUK BERSIKAP BODO AMAT.png" alt="Buku Non-Fiksi">
+            <h3>SEBUAH SENI UNTUK BERSIKAP BODO AMAT</h3>
+            <p>Selama beberapa tahun belakangan, Mark Manson...</p>
+        </div>
+        <div class="card">
+            <img src="The Power of Habit.png" alt="Buku Non-Fiksi">
+            <h3>THE POWER OF HABIT</h3>
+            <p>Buku ini menguraikan tentang penelitian terbaru yang menjelaskan kenapa kita memiliki kebiasaan...</p>
+        </div>
+        <div class="card">
+            <img src="Koala Kumal.png" alt="Buku Non-Fiksi">
+            <h3>KOALA KUMAL</h3>
+            <p>Koala Kumal adalah salah satu buku yang ditulis oleh Raditya Dika...</p>
+        </div>
+    </div>
+
+    <h2 class="section-label">★ Komik ★</h2>
+    <div class="card-container">
+        <div class="card">
+            <img src="Spy X Family 1.jpg" alt="Komik">
+            <h3>SPY X FAMILY 1</h3>
+            <p>Enjoy an exciting journey of espionage and family dynamics...</p>
+        </div>
+        <div class="card">
+            <img src="MY HERO ACADEMIA VOL 22.jpg" alt="Komik">
+            <h3>MY HERO ACADEMIA VOL 22</h3>
+            <p>Follow the journey of aspiring heroes in a world full of quirks...</p>
+        </div>
+        <div class="card">
+            <img src="Haikyu!.jpg" alt="Komik">
+            <h3>HAIKYU!</h3>
+            <p>Dive into the exhilarating world of volleyball and teamwork...</p>
+        </div>
+
+        <h2 class="section-label">★ Biografi ★</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="Suara Desa untuk Pemimpin Percik Pikiran dan Aksi Seorang Mantan Menteri.jpeg" alt="Biografi">
+                <h3>Suara Desa untuk Pemimpin: Percik Pikiran dan Aksi Seorang Mantan Menteri</h3>
+                <p>Desa menentukan sebagian besar kemajuan Indonesia...</p>
+            </div>
+            <div class="card">
+                <img src="B.J. Habibie Di Tengah Arus Transformasi Politik Indonesia.jpeg" alt="Komik">
+                <h3>B.J. Habibie: Di Tengah Arus Transformasi Politik Indonesia</h3>
+                <p>BJ Habibie memimpin Indonesia pada periode situasi yang sulit...</p>
+            </div>
+            <div class="card">
+                <img src="Muhammad saw. Teladan Sempurna Umat Manusia.jpeg" alt="Komik">
+                <h3>Muhammad saw. Teladan Sempurna Umat Manusia</h3>
+                <p>Yasir Qadhi adalah sebuah “brand” tersendiri...</p>
+            </div>
+        </div>
+
+        <h2 class="section-label">★ Ensiklopedia ★</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="Buku Seri Ensiklopedia Lift The Flap, Tubuh Manusia.jpeg" alt="ensiklopedia">
+                <h3>Buku Seri Ensiklopedia Lift The Flap: Tubuh Manusia</h3>
+                <p>Buka lipatan dalam buku ini untuk mengetahui banyak hal tentang tubuh manusia...</p>
+            </div>
+            <div class="card">
+                <img src="Ensiklopedia Sains (Usborne).jpg" alt="ensiklopedia">
+                <h3>Ensiklopedia Sains (Usborne)</h3>
+                <p>Buku ini membantu si Kecil untuk mempelajari ilmu pengetahuan...</p>
+            </div>
+            <div class="card">
+                <img src="Ensiklopedia Ilmuwan Fisika Abad 20.jpg" alt="ensiklopedia">
+                <h3>Ensiklopedia Ilmuwan Fisika Abad 20</h3>
+                <p>Salah satu jendela untuk memahami manusia...</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact-section">
+    <div class="contact-container">
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p>Email: <a href="mailto:info@sinaredukasi.com">info@sinaredukasi.com</a></p>
+            <p>Phone: +62-123-456-789</p>
+            <p>Address: Jl. Edukasi No. 12, Jakarta, Indonesia</p>
+        </div>
+        <div class="social-media">
+            <h2>Follow Us</h2>
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Perpustakaan Sinar Edukasi | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Transaksi</title>
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #001f3f;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            width: 90%;
+        }
+        h1 {
+            color: #001f3f;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #333;
+        }
+        input, select, button {
+            width: calc(100% - 10px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #0074D9;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #005f99;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            color: #333;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f8f9fa;
+        }
+        .link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .link a {
+            text-decoration: none;
+            color: #0074D9;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: 2px solid #0074D9;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .link a:hover {
+            background: #0074D9;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Halaman Transaksi</h1>
+        <form id="transactionForm">
+            <label for="memberName">Nama Anggota:</label>
+            <input type="text" id="memberName" name="memberName" placeholder="Masukkan nama anggota" required>
+
+            <label for="bookTitle">Judul Buku:</label>
+            <input type="text" id="bookTitle" name="bookTitle" placeholder="Masukkan judul buku" required>
+
+            <label for="transactionType">Jenis Transaksi:</label>
+            <select id="transactionType" name="transactionType">
+                <option value="Peminjaman">Peminjaman</option>
+                <option value="Pengembalian">Pengembalian</option>
+            </select>
+
+            <label for="transactionDate">Tanggal Transaksi:</label>
+            <input type="date" id="transactionDate" name="transactionDate" required>
+
+            <button type="submit">Simpan</button>
+        </form>
+        <div class="link">
+            <a href="index.html">Kembali ke Halaman Utama</a>
+        </div>
+    </div>
+</body>
+</html>
